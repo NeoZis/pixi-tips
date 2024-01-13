@@ -31,6 +31,8 @@ ctx.fillRect(0, 0, 1, 1);
 ```
 ## Spine
 
+Of course examples in [pixijs/spine](https://github.com/pixijs/spine/blob/master/examples/index.md) are very useful.
+
 1. Attaching custom container to Spine's slot
 
 ```
