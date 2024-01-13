@@ -94,3 +94,14 @@ And then you can use it like here:
     }
   });
 ```
+
+Or if you also like async functions like here:
+```
+  asyncPlay(name: string, options: PlayOptions = {}): Promise<void> {
+    return new Promise<void>((resolve) => {
+      this.play(name, options).once('complete', () => {
+        resolve();
+      });
+    });
+  }
+```
