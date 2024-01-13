@@ -36,27 +36,27 @@ Of course examples in [pixijs/spine](https://github.com/pixijs/spine/blob/master
 1. Attaching custom container to Spine's slot
 
 ```
-attachToSlot(slot: string, object: DisplayObject, removeChildren = true, useFirstChildPosition = false) {
-    const slotIndex = this.skeleton.findSlotIndex(slot);
-    if (slotIndex === -1) console.error(`There is no slot with name ${slot} in animation.`);
-
-    const slotContainer = this.slotContainers[slotIndex];
-    const container = new Container();
-
-    if (useFirstChildPosition) {
-      container.position.copyFrom(slotContainer.children[0].position);
-    }
-
-    if (removeChildren) {
-      slotContainer.removeChildren();
-    }
-
-    container.addChild(object);
-
-    container.scale.y = -1;
-
-    slotContainer.addChild(container);
- }
+  attachToSlot(slot: string, object: DisplayObject, removeChildren = true, useFirstChildPosition = false) {
+      const slotIndex = this.skeleton.findSlotIndex(slot);
+      if (slotIndex === -1) console.error(`There is no slot with name ${slot} in animation.`);
+  
+      const slotContainer = this.slotContainers[slotIndex];
+      const container = new Container();
+  
+      if (useFirstChildPosition) {
+        container.position.copyFrom(slotContainer.children[0].position);
+      }
+  
+      if (removeChildren) {
+        slotContainer.removeChildren();
+      }
+  
+      container.addChild(object);
+  
+      container.scale.y = -1;
+  
+      slotContainer.addChild(container);
+   }
 ```
 
 2. Change skin
@@ -73,17 +73,17 @@ attachToSlot(slot: string, object: DisplayObject, removeChildren = true, useFirs
 
 As for me it's very convient way:
 ```
-    this.state.addListener({
-      start: (...data) => {
-        this.emit('start', ...data);
-      },
-      complete: (...data) => {
-        this.emit('complete', ...data);
-      },
-      event: (...data) => {
-        this.emit('event', ...data);
-      },
-    });
+  this.state.addListener({
+    start: (...data) => {
+      this.emit('start', ...data);
+    },
+    complete: (...data) => {
+      this.emit('complete', ...data);
+    },
+    event: (...data) => {
+      this.emit('event', ...data);
+    },
+  });
 ```
 
 And then you can use it like here:
