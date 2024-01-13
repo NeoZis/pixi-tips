@@ -12,6 +12,10 @@ If you have another solution for some problems or want to participate, feel free
 
 [Adding `letter-spacing` can help you](https://github.com/pixijs/pixijs/issues/6817).
 
+2. Using `HTMLText` and custom font
+
+// TODO: will be soon
+
 ## Render
 
 1. Screen rotating on iOS devices.
