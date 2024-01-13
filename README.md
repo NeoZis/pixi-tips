@@ -68,3 +68,29 @@ attachToSlot(slot: string, object: DisplayObject, removeChildren = true, useFirs
     this.skeleton.setSkinByName(name);
   }
 ```
+
+3. Working with spine events as pixi events
+
+As for me it's very convient way:
+```
+    this.state.addListener({
+      start: (...data) => {
+        this.emit('start', ...data);
+      },
+      complete: (...data) => {
+        this.emit('complete', ...data);
+      },
+      event: (...data) => {
+        this.emit('event', ...data);
+      },
+    });
+```
+
+And then you can use it like here:
+```
+  this.spine.once('event', (_, event) => {
+    if (event.data.name === 'my_custom_event') {
+      // run some code
+    }
+  });
+```
