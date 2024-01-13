@@ -36,7 +36,7 @@ Of course examples in [pixijs/spine](https://github.com/pixijs/spine/blob/master
 1. Attaching custom container to Spine's slot
 
 ```
-  attachToSlot(slot: string, object: DisplayObject, removeChildren = true, useFirstChildPosition = false) {
+  attachToSlot(slot: string, object: DisplayObject, removeChildren = true, useFirstChildPosition = false): void {
       const slotIndex = this.skeleton.findSlotIndex(slot);
       if (slotIndex === -1) console.error(`There is no slot with name ${slot} in animation.`);
   
