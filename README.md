@@ -56,3 +56,13 @@ attachToSlot(slot: string, object: DisplayObject, removeChildren = true, useFirs
     slotContainer.addChild(container);
  }
 ```
+
+2. Change skin
+
+```
+  changeSkin(name: string): void {
+    this.skeleton.setSkin(null);
+    this.skeleton.setSlotsToSetupPose();
+    this.skeleton.setSkinByName(name);
+  }
+```
