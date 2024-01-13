@@ -23,7 +23,7 @@ This [problem](https://discourse.elm-lang.org/t/incorrect-onresize-window-dimens
 
 2. Rendering `Graphics` on several Samsung devices
 
-Do you want to use Graphics as an overlay? However, a bug appears only on some Samsung devices when QA creates it. There is a [solution](https://github.com/pixijs/pixijs/issues/8315).
+Do you want to use Graphics as an overlay? However, a bug was created by the QA engineer in Jira, with a description stating 'appears only on some Samsung devices.' Fortunately, there is a [solution](https://github.com/pixijs/pixijs/issues/8315).
 
 ```
 const ctx = Texture.WHITE.baseTexture.resource.source.getContext("2d");
