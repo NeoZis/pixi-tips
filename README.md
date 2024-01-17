@@ -161,3 +161,15 @@ After:
 Yeah, maybe it doesn't look perfect, but it works like clockwork, okay? And I prioritize working code over non-working.
 
 You might also say, 'On my computer, the first example works great.' Yes, it doesn't always fail. But, anyway, it can.
+
+## UI
+
+If you choose to develop game UI using HTML/CSS, you can find here some tips.
+
+1. Zooming on touchscreen devices on double-tap
+
+`touch-action: manipulation;` - helps with it ([more information](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action)).
+
+2. Blue overlay when a touchscreen user taps on a clickable element
+
+`-webkit-tap-highlight-color: transparent;` - helps with it ([source](https://hartenfeller.dev/blog/chrome-mobile-highlight-color)).
